@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ceypa Vision Mobilya & Mutfak Hizmetleri - İzmir'de özel tasarım mutfak, gardrop ve mobilya üretimi. Kaliteli malzeme, profesyonel montaj.">
+    <meta name="keywords" content="izmir mutfak tasarımı, özel mobilya, gardrop sistemleri, mutfak dolabı, ceypa vision mobilya">
+    <title>Mobilya & Mutfak Hizmetleri | Ceypa Vision - İzmir</title>
+    
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/no-select.css">
+    <link rel="stylesheet" href="css/preloader-animations.css">
+    <link rel="stylesheet" href="css/scroll-indicator.css">
+    
+    <style>
+        .service-hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            text-align: center;
+        }
+        
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: var(--bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: var(--shadow-bronze);
+        }
+        
+        .service-icon-large i {
+            font-size: 50px;
+            color: var(--white);
+        }
+        
+        .service-detail-section {
+            padding: 80px 0;
+            background: var(--primary-dark);
+        }
+        
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-box {
+            background: var(--secondary-dark);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(184, 115, 51, 0.1);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--bronze);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-box i {
+            font-size: 40px;
+            color: var(--bronze);
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .feature-box p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .process-timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-number {
+            width: 60px;
+            height: 60px;
+            background: var(--bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .material-card {
+            background: var(--secondary-dark);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(184, 115, 51, 0.1);
+        }
+        
+        .material-card i {
+            font-size: 30px;
+            color: var(--bronze);
+            margin-bottom: 15px;
+        }
+        
+        .material-card h4 {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .material-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Ceypa Vision" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                        <li class="dropdown">
+                            <a href="index.html#services" class="nav-link active">Hizmetler <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="hizmetler-insaat.html">İnşaat</a></li>
+                                <li><a href="hizmetler-icmimarlik.html">İç Mimarlık</a></li>
+                                <li><a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a></li>
+                                <li><a href="hizmetler-mobilya.html">Mobilya & Mutfak</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#portfolio" class="nav-link">Portföy</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="tel:+902324440403" class="btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span>+90 232 444 04 03</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-icon-large" data-aos="zoom-in">
+                <i class="fas fa-chair"></i>
+            </div>
+            <h1 class="section-title" data-aos="fade-up">Mobilya & Mutfak Hizmetleri</h1>
+            <div class="title-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                Özel tasarım mobilya ve mutfak çözümleriyle yaşam alanlarınıza değer katıyoruz. Kaliteli malzeme ve işçilikle üretim yapıyoruz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-detail-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Mobilya & Mutfak Hizmetlerimiz</h2>
+                <p class="section-description">
+                    Ceypa Vision olarak, size özel mobilya ve mutfak çözümleri üretiyoruz.
+                </p>
+            </div>
+            
+            <div class="service-features-grid">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Özel Mutfak Tasarımı</h3>
+                    <p>Mutfağınızı hayalinizdeki gibi tasarlıyor, fonksiyonel ve estetik çözümler sunuyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-door-open"></i>
+                    <h3>Gardrop Sistemleri</h3>
+                    <p>Yatak odalarınız için özel tasarım gardrop ve giyinme odası çözümleri üretiyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-couch"></i>
+                    <h3>Özel Mobilya Üretimi</h3>
+                    <p>TV üniteleri, kitaplıklar ve özel mobilyalar tasarlayıp üretiyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-tools"></i>
+                    <h3>Montaj ve Kurulum</h3>
+                    <p>Ürettiğimiz tüm mobilyaları profesyonel ekibimizle monte edip teslim ediyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section style="padding: 80px 0; background: var(--secondary-dark);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Kullandığımız Malzemeler</h2>
+                <p class="section-description">
+                    Kaliteli ve dayanıklı malzemelerle üretim yapıyoruz.
+                </p>
+            </div>
+            
+            <div class="materials-grid">
+                <div class="material-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-tree"></i>
+                    <h4>MDF & Lamine</h4>
+                    <p>Yüksek kalite MDF ve lamine kaplamalar</p>
+                </div>
+                
+                <div class="material-card" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fas fa-gem"></i>
+                    <h4>Akrilik</h4>
+                    <p>Parlak ve mat akrilik yüzeyler</p>
+                </div>
+                
+                <div class="material-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Kompakt Laminat</h4>
+                    <p>Su ve neme dayanıklı kompakt</p>
+                </div>
+                
+                <div class="material-card" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fas fa-mountain"></i>
+                    <h4>Granit & Mermer</h4>
+                    <p>Doğal taş tezgah seçenekleri</p>
+                </div>
+                
+                <div class="material-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cube"></i>
+                    <h4>Quartz</h4>
+                    <p>Dayanıklı quartz tezgahlar</p>
+                </div>
+                
+                <div class="material-card" data-aos="fade-up" data-aos-delay="350">
+                    <i class="fas fa-cog"></i>
+                    <h4>Aksesuarlar</h4>
+                    <p>Blum, Hafele gibi premium markalar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section style="padding: 80px 0; background: var(--primary-dark);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Üretim Sürecimiz</h2>
+                <p class="section-description">
+                    Mobilya ve mutfak projelerinizi profesyonel bir süreçle hayata geçiriyoruz.
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Ölçü Alma ve Keşif</h3>
+                        <p>Mekanınızı ziyaret ediyor, detaylı ölçüler alıyor ve ihtiyaçlarınızı belirliyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Tasarım ve Sunum</h3>
+                        <p>3D çizimlerle tasarımı görselleştiriyor, malzeme ve renk seçimi yapıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Üretim</h3>
+                        <p>Onaylanan tasarımı modern makinelerimizle hassas şekilde üretiyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Montaj ve Teslim</h3>
+                        <p>Üretilen mobilyaları profesyonel ekibimizle monte edip teslim ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: var(--secondary-dark); text-align: center;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Mobilya & Mutfak Projeniz İçin Bizimle İletişime Geçin</h2>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 30px;">
+                Ceypa Vision ile hayalinizdeki mutfak ve mobilyalara kavuşun
+            </p>
+            <a href="index.html#contact" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">
+                <span>Ücretsiz Keşif ve Teklif</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>CEYPA VISION</h3>
+                    <p>İnşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında 15 yılı aşkın deneyimimizle sektörde öncü konumdayız.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <div class="footer-links">
+                        <a href="hizmetler-insaat.html">İnşaat</a>
+                        <a href="hizmetler-icmimarlik.html">İç Mimarlık</a>
+                        <a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a>
+                        <a href="hizmetler-mobilya.html">Mobilya & Mutfak</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kurumsal</h4>
+                    <div class="footer-links">
+                        <a href="index.html#about">Hakkımızda</a>
+                        <a href="index.html#portfolio">Portföy</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">İletişim</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-links">
+                        <a href="tel:+902324440403"><i class="fas fa-phone"></i> +90 232 444 04 03</a>
+                        <a href="mailto:info@ceypavision.com.tr"><i class="fas fa-envelope"></i> info@ceypavision.com.tr</a>
+                        <a href="https://maps.google.com/?q=Vali+Rahmi+Bey+Mah.+Menderes+CD.+NO:59/1+Buca+İzmir" target="_blank"><i class="fas fa-map-marker-alt"></i> Buca, İzmir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Ceypa Vision</a>. Tüm hakları saklıdır. | 
+                <span class="designer-credit">Designed by <a href="https://wa.me/905528975831" target="_blank" rel="noopener">Burak KAYA</a></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn dark active" data-theme="dark" title="Dark Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="theme-btn light" data-theme="light" title="Light Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="theme-btn premium" data-theme="premium" title="Premium Theme">
+            <i class="fas fa-gem"></i>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/no-select.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Ceypa Vision - Robots.txt
+# https://ceypavision.com.tr
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+Disallow: /admin/
+Disallow: /admin/*
+
+# Sitemap
+Sitemap: https://ceypavision.com.tr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 10

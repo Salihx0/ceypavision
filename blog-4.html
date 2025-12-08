@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern mutfak tasarımı ipuçları ve Ceypa Vision'dan fonksiyonel mutfak çözümleri. Hayalinizdeki mutfağı oluşturun.">
+    <meta name="keywords" content="mutfak tasarımı, modern mutfak, fonksiyonel mutfak, ceypa vision, izmir mutfak">
+    <title>Modern Mutfak Tasarımı: Fonksiyonel ve Şık Çözümler | Ceypa Vision</title>
+    
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/no-select.css">
+    <link rel="stylesheet" href="css/preloader-animations.css">
+    
+    <style>
+        .article-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+        }
+        
+        .article-header {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: var(--bronze);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .article-title {
+            font-family: var(--font-primary);
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+        
+        .article-meta i {
+            color: var(--bronze);
+            margin-right: 8px;
+        }
+        
+        .article-featured-image {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .article-featured-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .article-content h2 {
+            font-family: var(--font-primary);
+            font-size: 32px;
+            color: var(--white);
+            margin: 40px 0 20px;
+        }
+        
+        .article-content h3 {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            color: var(--bronze);
+            margin: 30px 0 15px;
+        }
+        
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+        
+        .article-content li::marker {
+            color: var(--bronze);
+        }
+        
+        .article-quote {
+            background: var(--secondary-dark);
+            border-left: 4px solid var(--bronze);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        
+        .article-quote p {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--white);
+            margin: 0;
+        }
+        
+        .article-cta {
+            background: var(--secondary-dark);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0;
+            border: 1px solid rgba(184, 115, 51, 0.2);
+        }
+        
+        .article-cta h3 {
+            font-family: var(--font-primary);
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .article-cta p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+        
+        .related-posts {
+            background: var(--secondary-dark);
+            padding: 80px 0;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Ceypa Vision" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                        <li class="dropdown">
+                            <a href="index.html#services" class="nav-link">Hizmetler <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="hizmetler-insaat.html">İnşaat</a></li>
+                                <li><a href="hizmetler-icmimarlik.html">İç Mimarlık</a></li>
+                                <li><a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a></li>
+                                <li><a href="hizmetler-mobilya.html">Mobilya & Mutfak</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#portfolio" class="nav-link">Portföy</a></li>
+                        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                        <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="tel:+902324440403" class="btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span>+90 232 444 04 03</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-header" data-aos="fade-up">
+                <span class="article-category">Mobilya & Mutfak</span>
+                <h1 class="article-title">Modern Mutfak Tasarımı: Fonksiyonel ve Şık Çözümler</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> 1 Aralık 2024</span>
+                    <span><i class="far fa-clock"></i> 5 dk okuma</span>
+                    <span><i class="far fa-user"></i> Ceypa Vision</span>
+                </div>
+            </div>
+            <div class="article-featured-image" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/blog/mutfak-tasarim.jpg" alt="Modern Mutfak Tasarımı">
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section style="background: var(--primary-dark);">
+        <div class="article-content">
+            <p data-aos="fade-up">
+                Mutfak, evin kalbidir. Modern mutfak tasarımı, estetik ve fonksiyonelliği bir araya getirerek 
+                hayatınızı kolaylaştırır. Ceypa Vision olarak, hayalinizdeki mutfağı gerçeğe dönüştürüyoruz.
+            </p>
+
+            <h2 data-aos="fade-up">Modern Mutfak Tasarımının Temel Prensipleri</h2>
+            <p data-aos="fade-up">
+                Başarılı bir mutfak tasarımı, üç temel prensip üzerine kuruludur: fonksiyonellik, estetik ve ergonomi. 
+                Bu üç unsurun dengeli bir şekilde bir araya gelmesi, mükemmel bir mutfak yaratır.
+            </p>
+
+            <div class="article-quote" data-aos="fade-up">
+                <p>"İyi tasarlanmış bir mutfak, yemek pişirmeyi bir zevke dönüştürür."</p>
+            </div>
+
+            <h3 data-aos="fade-up">1. Çalışma Üçgeni Konsepti</h3>
+            <p data-aos="fade-up">
+                Mutfakta verimli çalışma için ocak, lavabo ve buzdolabı arasındaki mesafe optimize edilmelidir. 
+                Bu üç nokta arasındaki toplam mesafe 4-8 metre arasında olmalıdır.
+            </p>
+
+            <h3 data-aos="fade-up">2. Depolama Çözümleri</h3>
+            <ul data-aos="fade-up">
+                <li><strong>Çekmece Sistemleri:</strong> Soft-close mekanizmalı, tam çekmeli sistemler</li>
+                <li><strong>Köşe Dolaplar:</strong> Karusel veya magic corner sistemleri</li>
+                <li><strong>Yüksek Dolaplar:</strong> Ankastre cihazlar için özel bölmeler</li>
+                <li><strong>Açık Raflar:</strong> Dekoratif ve fonksiyonel açık raf çözümleri</li>
+            </ul>
+
+            <h2 data-aos="fade-up">Mutfak Tezgahı Seçimi</h2>
+            <p data-aos="fade-up">
+                Tezgah seçimi, mutfağınızın hem görünümünü hem de kullanım kolaylığını etkiler. İşte popüler seçenekler:
+            </p>
+
+            <h3 data-aos="fade-up">Tezgah Malzemeleri</h3>
+            <ol data-aos="fade-up">
+                <li><strong>Quartz:</strong> Dayanıklı, leke tutmaz, bakımı kolay</li>
+                <li><strong>Granit:</strong> Doğal, şık, her mutfağa uyum sağlar</li>
+                <li><strong>Mermer:</strong> Lüks görünüm, özel bakım gerektirir</li>
+                <li><strong>Kompakt Laminat:</strong> Ekonomik, su geçirmez, hijyenik</li>
+            </ol>
+
+            <h2 data-aos="fade-up">Renk ve Malzeme Seçimi</h2>
+            <p data-aos="fade-up">
+                2025'te mutfak tasarımında doğal renkler ve malzemeler ön planda. Ahşap tonları, mat yüzeyler 
+                ve metal aksesuarlar modern mutfakların vazgeçilmezleri.
+            </p>
+
+            <h3 data-aos="fade-up">Popüler Renk Kombinasyonları</h3>
+            <ul data-aos="fade-up">
+                <li>Beyaz + Ahşap + Siyah detaylar</li>
+                <li>Gri tonları + Bakır aksesuarlar</li>
+                <li>Lacivert + Gold detaylar</li>
+                <li>Yeşil tonları + Doğal ahşap</li>
+            </ul>
+
+            <div class="article-cta" data-aos="fade-up">
+                <h3>Hayalinizdeki Mutfak İçin Bizimle İletişime Geçin</h3>
+                <p>Ceypa Vision ile fonksiyonel ve şık mutfaklar tasarlayın</p>
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Ücretsiz Keşif ve Teklif</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <h2 data-aos="fade-up">Aydınlatma Tasarımı</h2>
+            <p data-aos="fade-up">
+                Mutfak aydınlatması, hem fonksiyonel hem de dekoratif olmalıdır. Üç katmanlı aydınlatma sistemi idealdir:
+            </p>
+
+            <ul data-aos="fade-up">
+                <li><strong>Genel Aydınlatma:</strong> Tavan spotları veya sarkıt</li>
+                <li><strong>Görev Aydınlatması:</strong> Tezgah altı LED'ler</li>
+                <li><strong>Dekoratif Aydınlatma:</strong> Vitrin içi ve açık raf aydınlatması</li>
+            </ul>
+
+            <h2 data-aos="fade-up">Ceypa Vision Mutfak Çözümleri</h2>
+            <p data-aos="fade-up">
+                15 yıllık deneyimimizle, size özel mutfak tasarımları sunuyoruz:
+            </p>
+
+            <ul data-aos="fade-up">
+                <li>3D görselleştirme ile tasarımınızı önceden görün</li>
+                <li>Kaliteli malzeme seçenekleri (Blum, Hafele aksesuarlar)</li>
+                <li>Profesyonel montaj ve garanti</li>
+                <li>Bütçenize uygun çözümler</li>
+                <li>Zamanında teslim garantisi</li>
+            </ul>
+
+            <h3 data-aos="fade-up">Mutfak Tasarımında Dikkat Edilmesi Gerekenler</h3>
+            <p data-aos="fade-up">
+                Mutfak tasarımında başarılı olmak için şu noktalara dikkat edin:
+            </p>
+
+            <ol data-aos="fade-up">
+                <li>Mutfağınızın boyutlarını doğru ölçün</li>
+                <li>Yaşam tarzınıza uygun tasarım seçin</li>
+                <li>Kaliteli malzeme ve aksesuarlara yatırım yapın</li>
+                <li>Yeterli depolama alanı planlayın</li>
+                <li>Aydınlatmayı ihmal etmeyin</li>
+            </ol>
+
+            <p data-aos="fade-up">
+                Modern ve fonksiyonel bir mutfak, hayat kalitenizi artırır. Ceypa Vision ile hayalinizdeki 
+                mutfağa kavuşun. Uzman ekibimiz, size özel çözümler sunmak için hazır.
+            </p>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">İlgili Yazılar</h2>
+            <div class="related-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/ic-mimarlik-trendleri.jpg" alt="İç Mimarlık Trendleri">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="blog-2.html">2025 İç Mimarlık Trendleri</a></h3>
+                        <a href="blog-2.html" class="blog-read-more">
+                            <span>Devamını Oku</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/insaat-dikkat.jpg" alt="İnşaat Projeleri">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="blog-5.html">İnşaat Projelerinde Dikkat Edilmesi Gerekenler</a></h3>
+                        <a href="blog-5.html" class="blog-read-more">
+                            <span>Devamını Oku</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="blog.html" class="btn btn-outline">
+                    <span>Tüm Blog Yazıları</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>CEYPA VISION</h3>
+                    <p>İnşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında 15 yılı aşkın deneyimimizle sektörde öncü konumdayız.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <div class="footer-links">
+                        <a href="hizmetler-insaat.html">İnşaat</a>
+                        <a href="hizmetler-icmimarlik.html">İç Mimarlık</a>
+                        <a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a>
+                        <a href="hizmetler-mobilya.html">Mobilya & Mutfak</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-links">
+                        <a href="tel:+902324440403"><i class="fas fa-phone"></i> +90 232 444 04 03</a>
+                        <a href="mailto:info@ceypavision.com.tr"><i class="fas fa-envelope"></i> info@ceypavision.com.tr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Ceypa Vision</a>. Tüm hakları saklıdır. | 
+                <span class="designer-credit">Designed by <a href="https://wa.me/905528975831" target="_blank" rel="noopener">Burak KAYA</a></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/no-select.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>

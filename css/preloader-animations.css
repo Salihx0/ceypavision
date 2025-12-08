@@ -1,0 +1,79 @@
+/* ===================================
+   CEYPA VISION - Enhanced Preloader Animations (Fixed)
+   =================================== */
+
+/* Logo Float Animation - Stable with Glow (No Rotation) */
+@keyframes logoFloat {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 20px rgba(184, 115, 51, 0.6));
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.05);
+        filter: drop-shadow(0 0 40px rgba(201, 169, 97, 0.9));
+    }
+}
+
+/* Text Pulse Animation */
+@keyframes textPulse {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: scale(1);
+        letter-spacing: 2px;
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.05);
+        letter-spacing: 4px;
+        text-shadow: 0 0 20px rgba(201, 169, 97, 0.8);
+    }
+}
+
+/* Stat Appear Animation */
+@keyframes statAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Stat Celebrate Animation */
+@keyframes statCelebrate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05) rotate(2deg);
+    }
+    75% {
+        transform: scale(1.05) rotate(-2deg);
+    }
+}
+
+/* Stat Glow Animation */
+@keyframes statGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(184, 115, 51, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(201, 169, 97, 0.6);
+    }
+}
+
+/* Enhanced Preloader Styles */
+.preloader .loader img {
+    animation: logoFloat 2s ease-in-out infinite;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 2;
+}
+
+.preloader .loader-inner {
+    animation: textPulse 1.5s ease-in-out infinite;
+}
+
+/* Removed rotating border - logo is now stable */

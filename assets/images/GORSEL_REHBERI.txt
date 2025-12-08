@@ -1,0 +1,120 @@
+===========================================
+CEYPA VISION - GÖRSEL REHBERİ
+===========================================
+
+Bu klasöre aşağıdaki görselleri eklemeniz gerekmektedir:
+
+📁 Ana Klasör (assets/images/)
+================================
+
+1. logo.png
+   - Boyut: Yükseklik 100-150px (genişlik orantılı)
+   - Format: PNG (şeffaf arka plan)
+   - Kullanım: Site logosu (navbar ve footer)
+
+2. about-main.jpg
+   - Boyut: 800x600px veya daha büyük
+   - Format: JPG
+   - Kullanım: Hakkımızda bölümü ana görseli
+   - İçerik: Firma binası, ekip fotoğrafı veya proje görseli
+
+3. service-insaat.jpg
+   - Boyut: 600x400px veya daha büyük
+   - Format: JPG
+   - Kullanım: İnşaat hizmeti kartı
+   - İçerik: İnşaat sahası, bina yapımı
+
+4. service-icmimarlik.jpg
+   - Boyut: 600x400px veya daha büyük
+   - Format: JPG
+   - Kullanım: İç Mimarlık hizmeti kartı
+   - İçerik: İç mekan tasarımı, dekorasyon
+
+5. service-kentsel.jpg
+   - Boyut: 600x400px veya daha büyük
+   - Format: JPG
+   - Kullanım: Kentsel Dönüşüm hizmeti kartı
+   - İçerik: Kentsel dönüşüm projesi
+
+6. service-mobilya.jpg
+   - Boyut: 600x400px veya daha büyük
+   - Format: JPG
+   - Kullanım: Mobilya & Mutfak hizmeti kartı
+   - İçerik: Mutfak tasarımı, mobilya
+
+📁 Portföy Klasörü (assets/images/portfolio/)
+==============================================
+
+7-12. project-1.jpg, project-2.jpg, ... project-6.jpg
+   - Boyut: 800x600px veya daha büyük
+   - Format: JPG
+   - Kullanım: Portföy galerisi
+   - Kategoriler:
+     * project-1.jpg: İnşaat (data-category="insaat")
+     * project-2.jpg: İç Mimarlık (data-category="ic-mimarlik")
+     * project-3.jpg: Kentsel Dönüşüm (data-category="kentsel")
+     * project-4.jpg: Mobilya & Mutfak (data-category="mobilya")
+     * project-5.jpg: İnşaat (data-category="insaat")
+     * project-6.jpg: İç Mimarlık (data-category="ic-mimarlik")
+
+📁 İkonlar Klasörü (assets/icons/)
+===================================
+
+13. favicon.png
+   - Boyut: 32x32px veya 64x64px
+   - Format: PNG
+   - Kullanım: Tarayıcı sekmesi ikonu
+
+14. apple-touch-icon.png
+   - Boyut: 180x180px
+   - Format: PNG
+   - Kullanım: iOS cihazlar için ikon
+
+📁 Video Klasörü (assets/videos/)
+==================================
+
+15. hero-bg.mp4 (OPSİYONEL)
+   - Boyut: 1920x1080px (Full HD)
+   - Format: MP4
+   - Süre: 10-30 saniye (loop için)
+   - Kullanım: Ana sayfa arka plan videosu
+   - Not: Video yoksa otomatik olarak gradient arka plan kullanılır
+
+===========================================
+ÖNEMLİ NOTLAR
+===========================================
+
+✅ Tüm görseller optimize edilmiş olmalı (web için sıkıştırılmış)
+✅ Dosya isimleri tam olarak yukarıdaki gibi olmalı (küçük harf)
+✅ Görseller yüksek kaliteli ve profesyonel olmalı
+✅ Telif hakkı sorunları olmamalı
+✅ Görseller sitenin lüks ve premium temasına uygun olmalı
+
+📌 Görsel Optimizasyon Önerileri:
+- JPG görseller için: %80-85 kalite
+- PNG görseller için: Şeffaf arka plan gerekiyorsa PNG, değilse JPG
+- Maksimum dosya boyutu: 500KB (görseller için), 5MB (video için)
+- Araçlar: TinyPNG, Squoosh, ImageOptim
+
+📌 Placeholder Görseller:
+Gerçek görseller hazır olana kadar şu sitelerden ücretsiz görseller kullanabilirsiniz:
+- Unsplash.com
+- Pexels.com
+- Pixabay.com
+
+Arama terimleri:
+- "luxury interior design"
+- "modern architecture"
+- "construction site"
+- "kitchen design"
+- "urban transformation"
+
+===========================================
+DESTEK
+===========================================
+
+Görsel ekleme konusunda yardıma ihtiyacınız varsa:
+📧 E-posta: info@ceypavision.com.tr
+📞 Telefon: 444 04 03
+
+===========================================

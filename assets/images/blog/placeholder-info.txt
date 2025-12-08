@@ -1,0 +1,42 @@
+# Blog Görselleri Placeholder Bilgileri
+
+Aşağıdaki görseller için yüksek kaliteli, profesyonel fotoğraflar kullanılmalıdır:
+
+## 1. kentsel-donusum-izmir.jpg
+- Konu: İzmir'de kentsel dönüşüm, modern binalar
+- Önerilen boyut: 800x500px
+- Alternatif: Unsplash'tan "urban transformation" veya "modern architecture izmir"
+- Placeholder URL: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop
+
+## 2. ic-mimarlik-trendleri.jpg
+- Konu: Modern iç mimarlık, minimalist tasarım
+- Önerilen boyut: 800x500px
+- Alternatif: "modern interior design" veya "luxury interior"
+- Placeholder URL: https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=500&fit=crop
+
+## 3. kentsel-donusum-rehberi.jpg
+- Konu: Şehir planlaması, kentsel dönüşüm süreci
+- Önerilen boyut: 800x500px
+- Alternatif: "city planning" veya "urban development"
+- Placeholder URL: https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop
+
+## 4. mutfak-tasarimi.jpg
+- Konu: Lüks mutfak tasarımı, modern mutfak
+- Önerilen boyut: 800x500px
+- Alternatif: "luxury kitchen design" veya "modern kitchen"
+- Placeholder URL: https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=500&fit=crop
+
+## 5. insaat-dikkat.jpg
+- Konu: İnşaat sahası, yapım aşaması
+- Önerilen boyut: 800x500px
+- Alternatif: "construction site" veya "building construction"
+- Placeholder URL: https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=500&fit=crop
+
+## Kullanım Talimatları:
+1. Unsplash.com'dan ücretsiz yüksek kaliteli görseller indirebilirsiniz
+2. Görselleri yukarıdaki isimlerle kaydedin
+3. assets/images/blog/ klasörüne yerleştirin
+4. Alternatif olarak kendi proje fotoğraflarınızı kullanabilirsiniz
+
+## Lisans:
+Unsplash görselleri ticari kullanım için ücretsizdir.

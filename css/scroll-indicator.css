@@ -1,0 +1,84 @@
+/* ===================================
+   CEYPA VISION - Scroll Indicator
+   =================================== */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.scroll-mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--bronze);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    box-shadow: 0 0 20px rgba(184, 115, 51, 0.3);
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 10px;
+    background: var(--bronze);
+    border-radius: 2px;
+    animation: scrollWheel 2s ease-in-out infinite;
+}
+
+.scroll-text {
+    color: var(--bronze);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: scrollTextPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(15px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes scrollTextPulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        bottom: 30px;
+    }
+    
+    .scroll-mouse {
+        width: 25px;
+        height: 40px;
+    }
+    
+    .scroll-text {
+        font-size: 10px;
+    }
+}

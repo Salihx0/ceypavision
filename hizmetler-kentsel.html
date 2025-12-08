@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ceypa Vision Kentsel Dönüşüm Hizmetleri - İzmir'de güvenilir kentsel dönüşüm danışmanlığı ve uygulama. Hukuki süreç yönetimi, proje takibi.">
+    <meta name="keywords" content="izmir kentsel dönüşüm, buca kentsel dönüşüm, kentsel dönüşüm danışmanlık, deprem güvenliği, ceypa vision">
+    <title>Kentsel Dönüşüm Hizmetleri | Ceypa Vision - İzmir</title>
+    
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/no-select.css">
+    <link rel="stylesheet" href="css/preloader-animations.css">
+    <link rel="stylesheet" href="css/scroll-indicator.css">
+    
+    <style>
+        .service-hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            text-align: center;
+        }
+        
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: var(--bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: var(--shadow-bronze);
+        }
+        
+        .service-icon-large i {
+            font-size: 50px;
+            color: var(--white);
+        }
+        
+        .service-detail-section {
+            padding: 80px 0;
+            background: var(--primary-dark);
+        }
+        
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-box {
+            background: var(--secondary-dark);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(184, 115, 51, 0.1);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--bronze);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-box i {
+            font-size: 40px;
+            color: var(--bronze);
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .feature-box p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .process-timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-number {
+            width: 60px;
+            height: 60px;
+            background: var(--bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .info-box {
+            background: var(--secondary-dark);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--bronze);
+            margin: 30px 0;
+        }
+        
+        .info-box h4 {
+            color: var(--bronze);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box ul li {
+            color: var(--gray);
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .info-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--bronze);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Ceypa Vision" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                        <li class="dropdown">
+                            <a href="index.html#services" class="nav-link active">Hizmetler <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="hizmetler-insaat.html">İnşaat</a></li>
+                                <li><a href="hizmetler-icmimarlik.html">İç Mimarlık</a></li>
+                                <li><a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a></li>
+                                <li><a href="hizmetler-mobilya.html">Mobilya & Mutfak</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#portfolio" class="nav-link">Portföy</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="tel:+902324440403" class="btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span>+90 232 444 04 03</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-icon-large" data-aos="zoom-in">
+                <i class="fas fa-city"></i>
+            </div>
+            <h1 class="section-title" data-aos="fade-up">Kentsel Dönüşüm Hizmetleri</h1>
+            <div class="title-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                Kentsel dönüşüm projelerinde uzman danışmanlık ve uygulama hizmetleri sunuyoruz. Güvenli ve modern yaşam alanları oluşturuyoruz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-detail-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Kentsel Dönüşüm Hizmetlerimiz</h2>
+                <p class="section-description">
+                    Ceypa Vision olarak, kentsel dönüşüm sürecinin her aşamasında yanınızdayız.
+                </p>
+            </div>
+            
+            <div class="info-box" data-aos="fade-up">
+                <h4><i class="fas fa-info-circle"></i> Kentsel Dönüşüm Nedir?</h4>
+                <p style="color: var(--gray); line-height: 1.8;">
+                    Kentsel dönüşüm, deprem riski taşıyan veya eskimiş binaların yıkılarak yerine depreme dayanıklı, 
+                    modern ve güvenli yapıların inşa edilmesi sürecidir. Bu süreç, hak sahiplerinin mağdur olmaması 
+                    için yasal çerçevede ve profesyonel yönetimle gerçekleştirilir.
+                </p>
+            </div>
+            
+            <div class="service-features-grid">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Proje Danışmanlığı</h3>
+                    <p>Kentsel dönüşüm sürecinin tüm aşamalarında profesyonel danışmanlık hizmeti veriyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Hukuki Süreç Yönetimi</h3>
+                    <p>Tüm yasal işlemleri takip ediyor, hak sahiplerinin haklarını koruyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>İnşaat Uygulaması</h3>
+                    <p>Depreme dayanıklı, modern ve kaliteli yapılar inşa ediyoruz.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Teslim Sonrası Destek</h3>
+                    <p>Proje tesliminden sonra da yanınızda olmaya devam ediyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section style="padding: 80px 0; background: var(--secondary-dark);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Kentsel Dönüşüm Sürecimiz</h2>
+                <p class="section-description">
+                    Kentsel dönüşüm projelerinizi adım adım yönetiyoruz.
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>İlk Görüşme ve Analiz</h3>
+                        <p>Binanızı inceliyor, hak sahipleriyle görüşüyor ve fizibilite çalışması yapıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Yasal İzinler ve Ruhsat</h3>
+                        <p>Belediye ve ilgili kurumlardan gerekli izinleri alıyor, yasal süreci başlatıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Proje Tasarımı</h3>
+                        <p>Mimari ve statik projeleri hazırlıyor, hak sahiplerine sunuyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Yıkım ve İnşaat</h3>
+                        <p>Eski binayı güvenli şekilde yıkıyor, yeni binayı inşa ediyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Teslim ve İskan</h3>
+                        <p>Projeyi tamamlayıp, iskan ruhsatını alarak hak sahiplerine teslim ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-box" data-aos="fade-up">
+                <h4><i class="fas fa-shield-alt"></i> Kentsel Dönüşümde Güvence</h4>
+                <ul>
+                    <li>Tüm süreç yasal çerçevede yürütülür</li>
+                    <li>Hak sahiplerinin hakları korunur</li>
+                    <li>Depreme dayanıklı yapılar inşa edilir</li>
+                    <li>Şeffaf ve güvenilir süreç yönetimi</li>
+                    <li>Profesyonel ekip ve deneyim</li>
+                    <li>Zamanında teslim garantisi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: var(--primary-dark); text-align: center;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Kentsel Dönüşüm İçin Bizimle İletişime Geçin</h2>
+            <p class="section-description" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 30px;">
+                Ceypa Vision ile güvenli ve modern yaşam alanlarına kavuşun
+            </p>
+            <a href="index.html#contact" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">
+                <span>Ücretsiz Danışmanlık</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>CEYPA VISION</h3>
+                    <p>İnşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında 15 yılı aşkın deneyimimizle sektörde öncü konumdayız.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <div class="footer-links">
+                        <a href="hizmetler-insaat.html">İnşaat</a>
+                        <a href="hizmetler-icmimarlik.html">İç Mimarlık</a>
+                        <a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a>
+                        <a href="hizmetler-mobilya.html">Mobilya & Mutfak</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kurumsal</h4>
+                    <div class="footer-links">
+                        <a href="index.html#about">Hakkımızda</a>
+                        <a href="index.html#portfolio">Portföy</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">İletişim</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-links">
+                        <a href="tel:+902324440403"><i class="fas fa-phone"></i> +90 232 444 04 03</a>
+                        <a href="mailto:info@ceypavision.com.tr"><i class="fas fa-envelope"></i> info@ceypavision.com.tr</a>
+                        <a href="https://maps.google.com/?q=Vali+Rahmi+Bey+Mah.+Menderes+CD.+NO:59/1+Buca+İzmir" target="_blank"><i class="fas fa-map-marker-alt"></i> Buca, İzmir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Ceypa Vision</a>. Tüm hakları saklıdır. | 
+                <span class="designer-credit">Designed by <a href="https://wa.me/905528975831" target="_blank" rel="noopener">Burak KAYA</a></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn dark active" data-theme="dark" title="Dark Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="theme-btn light" data-theme="light" title="Light Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="theme-btn premium" data-theme="premium" title="Premium Theme">
+            <i class="fas fa-gem"></i>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/no-select.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>

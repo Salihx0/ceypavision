@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ceypa Vision</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100vh;
+            background: #1a1a2e;
+            padding: 30px 0;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .sidebar-header {
+            padding: 0 25px 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .sidebar-header h2 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar-header p {
+            color: #cccccc;
+            font-size: 12px;
+        }
+        
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+        
+        .menu-item {
+            padding: 15px 25px;
+            color: #cccccc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .menu-item:hover,
+        .menu-item.active {
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            border-left: 3px solid #d4af37;
+        }
+        
+        .menu-item i {
+            font-size: 18px;
+            width: 20px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: #1a1a2e;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #ffffff;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            background: #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #0a0a0a;
+        }
+        
+        .logout-btn {
+            padding: 10px 20px;
+            background: rgba(220, 53, 69, 0.2);
+            color: #ff6b6b;
+            border: 1px solid rgba(220, 53, 69, 0.5);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(220, 53, 69, 0.3);
+        }
+        
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #1a1a2e;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .stat-icon i {
+            font-size: 28px;
+            color: #d4af37;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #cccccc;
+            font-size: 14px;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #ffffff;
+        }
+        
+        .btn-primary {
+            padding: 12px 25px;
+            background: #d4af37;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary:hover {
+            background: #f4d03f;
+            transform: translateY(-2px);
+        }
+        
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        th {
+            color: #d4af37;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        td {
+            color: #cccccc;
+        }
+        
+        tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .action-btns {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-edit, .btn-delete {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-edit {
+            background: rgba(40, 167, 69, 0.2);
+            color: #51cf66;
+            border: 1px solid rgba(40, 167, 69, 0.5);
+        }
+        
+        .btn-delete {
+            background: rgba(220, 53, 69, 0.2);
+            color: #ff6b6b;
+            border: 1px solid rgba(220, 53, 69, 0.5);
+        }
+        
+        .btn-edit:hover {
+            background: rgba(40, 167, 69, 0.3);
+        }
+        
+        .btn-delete:hover {
+            background: rgba(220, 53, 69, 0.3);
+        }
+        
+        /* Form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: #0a0a0a;
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: #d4af37;
+            color: #0a0a0a;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .sidebar {
+                left: -260px;
+            }
+            
+            .sidebar.active {
+                left: 0;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 20px 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>CEYPA VISION</h2>
+            <p>Admin Paneli</p>
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active" data-section="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="menu-item" data-section="portfolio">
+                <i class="fas fa-images"></i>
+                <span>Portföy Yönetimi</span>
+            </a>
+            <a href="#" class="menu-item" data-section="messages">
+                <i class="fas fa-envelope"></i>
+                <span>Mesajlar</span>
+            </a>
+            <a href="#" class="menu-item" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>Ayarlar</span>
+            </a>
+            <a href="../index.html" class="menu-item">
+                <i class="fas fa-globe"></i>
+                <span>Siteyi Görüntüle</span>
+            </a>
+        </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Hoş Geldiniz, <span id="adminName">Admin</span></h1>
+            <div class="user-info">
+                <div class="user-avatar">A</div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+                </button>
+            </div>
+        </div>
+        
+        <!-- Dashboard Section -->
+        <div class="content-section active" id="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">Toplam Proje</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Yeni Mesaj</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-value">1,234</div>
+                    <div class="stat-label">Ziyaretçi (Bu Ay)</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-value">4.9</div>
+                    <div class="stat-label">Müşteri Memnuniyeti</div>
+                </div>
+            </div>
+            
+            <div class="content-section active">
+                <div class="section-header">
+                    <h2 class="section-title">Son Aktiviteler</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Aktivite</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15.11.2024</td>
+                                <td>Yeni proje eklendi: Lüks Villa</td>
+                                <td><span style="color: #51cf66;">✓ Tamamlandı</span></td>
+                            </tr>
+                            <tr>
+                                <td>14.11.2024</td>
+                                <td>İletişim formu mesajı alındı</td>
+                                <td><span style="color: #ffd43b;">⏳ Beklemede</span></td>
+                            </tr>
+                            <tr>
+                                <td>13.11.2024</td>
+                                <td>Portföy güncellendi</td>
+                                <td><span style="color: #51cf66;">✓ Tamamlandı</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Section -->
+        <div class="content-section" id="portfolio">
+            <div class="section-header">
+                <h2 class="section-title">Portföy Yönetimi</h2>
+                <button class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Yeni Proje Ekle
+                </button>
+            </div>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Proje Adı</label>
+                    <input type="text" placeholder="Proje adını girin">
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select>
+                        <option>İnşaat</option>
+                        <option>İç Mimarlık</option>
+                        <option>Kentsel Dönüşüm</option>
+                        <option>Mobilya & Mutfak</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Görsel</label>
+                    <input type="file" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <textarea placeholder="Proje açıklaması"></textarea>
+                </div>
+            </div>
+            
+            <button class="btn-primary" style="margin-top: 20px;">
+                <i class="fas fa-save"></i>
+                Kaydet
+            </button>
+        </div>
+        
+        <!-- Messages Section -->
+        <div class="content-section" id="messages">
+            <div class="section-header">
+                <h2 class="section-title">İletişim Mesajları</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>İsim</th>
+                            <th>E-posta</th>
+                            <th>Hizmet</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15.11.2024</td>
+                            <td>Ahmet Yılmaz</td>
+                            <td>ahmet@example.com</td>
+                            <td>İnşaat</td>
+                            <td class="action-btns">
+                                <button class="btn-edit">Görüntüle</button>
+                                <button class="btn-delete">Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14.11.2024</td>
+                            <td>Ayşe Demir</td>
+                            <td>ayse@example.com</td>
+                            <td>İç Mimarlık</td>
+                            <td class="action-btns">
+                                <button class="btn-edit">Görüntüle</button>
+                                <button class="btn-delete">Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Settings Section -->
+        <div class="content-section" id="settings">
+            <div class="section-header">
+                <h2 class="section-title">Ayarlar</h2>
+            </div>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Site Başlığı</label>
+                    <input type="text" value="Ceypa Vision">
+                </div>
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" value="info@ceypavision.com.tr">
+                </div>
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" value="444 04 03">
+                </div>
+                <div class="form-group">
+                    <label>Adres</label>
+                    <textarea>Vali Rahmi Bey Mah. Menderes CD. NO:59/1, Buca, İzmir</textarea>
+                </div>
+            </div>
+            
+            <button class="btn-primary" style="margin-top: 20px;">
+                <i class="fas fa-save"></i>
+                Değişiklikleri Kaydet
+            </button>
+        </div>
+    </main>
+
+    <script>
+        // Check if logged in
+        if (sessionStorage.getItem('adminLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        
+        // Set admin name
+        const adminName = sessionStorage.getItem('adminUsername') || 'Admin';
+        document.getElementById('adminName').textContent = adminName;
+        document.querySelector('.user-avatar').textContent = adminName.charAt(0).toUpperCase();
+        
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
+                sessionStorage.removeItem('adminLoggedIn');
+                sessionStorage.removeItem('adminUsername');
+                window.location.href = 'index.html';
+            }
+        });
+        
+        // Menu navigation
+        const menuItems = document.querySelectorAll('.menu-item[data-section]');
+        const sections = document.querySelectorAll('.content-section');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all items
+                menuItems.forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Hide all sections
+                sections.forEach(s => s.classList.remove('active'));
+                // Show selected section
+                const sectionId = this.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Close mobile menu
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        });
+        
+        // Mobile toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.getElementById('mobileToggle');
+            
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !toggle.contains(e.target) &&
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

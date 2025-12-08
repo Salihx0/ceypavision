@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İzmir'de kentsel dönüşüm projeleri hakkında Ceypa Vision'dan uzman rehber. Güvenli ve modern yaşam alanları için kentsel dönüşüm süreci.">
+    <meta name="keywords" content="izmir kentsel dönüşüm, ceypa vision, buca kentsel dönüşüm, kentsel dönüşüm rehberi, güvenli konut">
+    <title>İzmir'de Kentsel Dönüşüm: Güvenli Geleceğe Adım | Ceypa Vision</title>
+    
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        .article-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+        }
+        
+        .article-header {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: var(--bronze);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .article-title {
+            font-family: var(--font-primary);
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+        
+        .article-meta i {
+            color: var(--bronze);
+            margin-right: 8px;
+        }
+        
+        .article-featured-image {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .article-featured-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .article-content h2 {
+            font-family: var(--font-primary);
+            font-size: 32px;
+            color: var(--white);
+            margin: 40px 0 20px;
+        }
+        
+        .article-content h3 {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            color: var(--bronze);
+            margin: 30px 0 15px;
+        }
+        
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+        
+        .article-content li::marker {
+            color: var(--bronze);
+        }
+        
+        .article-quote {
+            background: var(--secondary-dark);
+            border-left: 4px solid var(--bronze);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        
+        .article-quote p {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--white);
+            margin: 0;
+        }
+        
+        .article-cta {
+            background: var(--secondary-dark);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0;
+            border: 1px solid rgba(184, 115, 51, 0.2);
+        }
+        
+        .article-cta h3 {
+            font-family: var(--font-primary);
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .article-cta p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+        
+        .related-posts {
+            background: var(--secondary-dark);
+            padding: 80px 0;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Ceypa Vision" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                        <li><a href="index.html#services" class="nav-link">Hizmetler</a></li>
+                        <li><a href="index.html#portfolio" class="nav-link">Portföy</a></li>
+                        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                        <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="tel:+902324440403" class="btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span>+90 232 444 04 03</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-header" data-aos="fade-up">
+                <span class="article-category">Kentsel Dönüşüm</span>
+                <h1 class="article-title">Ceypa Vision ile İzmir'de Kentsel Dönüşüm: Güvenli Geleceğe Adım</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> 15 Kasım 2025</span>
+                    <span><i class="far fa-clock"></i> 5 dk okuma</span>
+                    <span><i class="far fa-user"></i> Ceypa Vision</span>
+                </div>
+            </div>
+            <div class="article-featured-image" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/blog/kentsel-donusum-izmir.jpg" alt="İzmir Kentsel Dönüşüm">
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section style="background: var(--primary-dark);">
+        <div class="article-content">
+            <p data-aos="fade-up">
+                İzmir, Türkiye'nin en önemli metropollerinden biri olarak, kentsel dönüşüm projelerinde öncü rol oynamaktadır. 
+                Ceypa Vision olarak, 15 yıllık deneyimimizle İzmir'de güvenli ve modern yaşam alanları oluşturuyoruz. 
+                Bu yazımızda, kentsel dönüşüm sürecini ve Ceypa Vision farkını sizler için detaylandırıyoruz.
+            </p>
+
+            <h2 data-aos="fade-up">Kentsel Dönüşüm Neden Önemli?</h2>
+            <p data-aos="fade-up">
+                Kentsel dönüşüm, eski ve riskli yapıların yerine depreme dayanıklı, modern ve konforlu yaşam alanlarının 
+                inşa edilmesi sürecidir. İzmir'de özellikle deprem riski göz önüne alındığında, kentsel dönüşüm hayati 
+                bir öneme sahiptir.
+            </p>
+
+            <div class="article-quote" data-aos="fade-up">
+                <p>"Kentsel dönüşüm sadece bir inşaat projesi değil, ailelerin geleceğini güvence altına alma sürecidir."</p>
+            </div>
+
+            <h3 data-aos="fade-up">Ceypa Vision ile Kentsel Dönüşümün Avantajları</h3>
+            <ul data-aos="fade-up">
+                <li><strong>Deprem Güvenliği:</strong> En son teknoloji ve standartlarla inşa edilen depreme dayanıklı yapılar</li>
+                <li><strong>Modern Yaşam Alanları:</strong> Çağdaş mimari ve konforlu iç mekanlar</li>
+                <li><strong>Değer Artışı:</strong> Yeni yapılarla birlikte artan emlak değeri</li>
+                <li><strong>Enerji Verimliliği:</strong> Modern yalıtım ve enerji tasarrufu sağlayan sistemler</li>
+                <li><strong>Sosyal Donatı Alanları:</strong> Park, spor alanları ve sosyal tesisler</li>
+            </ul>
+
+            <h2 data-aos="fade-up">Kentsel Dönüşüm Süreci Nasıl İşler?</h2>
+            <p data-aos="fade-up">
+                Ceypa Vision olarak, kentsel dönüşüm sürecini müşterilerimiz için en kolay ve anlaşılır hale getiriyoruz:
+            </p>
+
+            <ol data-aos="fade-up">
+                <li><strong>İlk Görüşme ve Değerlendirme:</strong> Uzman ekibimiz mevcut yapınızı inceler ve size en uygun çözümü sunar</li>
+                <li><strong>Hukuki Süreç:</strong> Tüm yasal işlemleri profesyonel ekibimizle yönetiyoruz</li>
+                <li><strong>Proje Tasarımı:</strong> Modern ve fonksiyonel tasarımlarla hayalinizdeki evi oluşturuyoruz</li>
+                <li><strong>İnşaat Süreci:</strong> Kaliteli malzeme ve işçilikle güvenli yapılar inşa ediyoruz</li>
+                <li><strong>Teslim ve Sonrası:</strong> Teslim sonrası destek hizmetlerimizle yanınızdayız</li>
+            </ol>
+
+            <div class="article-cta" data-aos="fade-up">
+                <h3>Kentsel Dönüşüm Projeniz İçin Bizimle İletişime Geçin</h3>
+                <p>Ceypa Vision uzmanları, size özel çözümler sunmak için hazır</p>
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Ücretsiz Danışmanlık Alın</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <h2 data-aos="fade-up">İzmir'de Kentsel Dönüşüm: Bölgesel Özellikler</h2>
+            <p data-aos="fade-up">
+                İzmir'in farklı ilçelerinde kentsel dönüşüm projeleri farklı özellikler göstermektedir. Buca, Karşıyaka, 
+                Konak ve diğer ilçelerde Ceypa Vision olarak başarılı projeler gerçekleştirdik. Her bölgenin kendine özgü 
+                ihtiyaçlarını göz önünde bulundurarak, size en uygun çözümleri sunuyoruz.
+            </p>
+
+            <h3 data-aos="fade-up">Neden Ceypa Vision?</h3>
+            <p data-aos="fade-up">
+                15 yıllık deneyimimiz, uzman kadromuz ve müşteri memnuniyeti odaklı yaklaşımımızla İzmir'de kentsel 
+                dönüşümün öncü firmasıyız. Her projede kalite, güvenlik ve estetik anlayışımızı ön planda tutuyoruz.
+            </p>
+
+            <ul data-aos="fade-up">
+                <li>150+ tamamlanmış proje</li>
+                <li>500+ mutlu aile</li>
+                <li>%100 müşteri memnuniyeti</li>
+                <li>7/24 müşteri desteği</li>
+            </ul>
+
+            <p data-aos="fade-up">
+                Kentsel dönüşüm sürecinde yanınızda olmaktan gurur duyuyoruz. Güvenli ve modern bir gelecek için 
+                Ceypa Vision'ı tercih edin.
+            </p>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">İlgili Yazılar</h2>
+            <div class="related-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/kentsel-donusum-rehberi.jpg" alt="Kentsel Dönüşüm Rehberi">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="blog-3.html">Kentsel Dönüşüm Nedir? Avantajları ve Ceypa Vision Farkı</a></h3>
+                        <a href="blog-3.html" class="blog-read-more">
+                            <span>Devamını Oku</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/insaat-dikkat.jpg" alt="İnşaat Projeleri">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="blog-5.html">İnşaat Projelerinde Dikkat Edilmesi Gerekenler</a></h3>
+                        <a href="blog-5.html" class="blog-read-more">
+                            <span>Devamını Oku</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="blog.html" class="btn btn-outline">
+                    <span>Tüm Blog Yazıları</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>CEYPA VISION</h3>
+                    <p>İnşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında 15 yılı aşkın deneyimimizle sektörde öncü konumdayız.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Ana Sayfa</a>
+                        <a href="index.html#about">Hakkımızda</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-links">
+                        <a href="tel:+902324440403"><i class="fas fa-phone"></i> +90 232 444 04 03</a>
+                        <a href="mailto:info@ceypavision.com.tr"><i class="fas fa-envelope"></i> info@ceypavision.com.tr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="index.html">Ceypa Vision</a>. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>
