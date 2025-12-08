@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="css/no-select.css">
     <link rel="stylesheet" href="css/preloader-animations.css">
     <link rel="stylesheet" href="css/scroll-indicator.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
 </head>
 <body>
     
@@ -84,21 +85,28 @@
                 
                 <div class="nav-menu" id="navMenu">
                     <ul class="nav-list">
-                        <li><a href="#home" class="nav-link active">Ana Sayfa</a></li>
-                        <li><a href="#about" class="nav-link">Hakkımızda</a></li>
+                        <li><a href="#home" class="nav-link active" data-i18n="nav_home">Ana Sayfa</a></li>
+                        <li><a href="#about" class="nav-link" data-i18n="nav_about">Hakkımızda</a></li>
                         <li class="dropdown">
-                            <a href="#services" class="nav-link">Hizmetler <i class="fas fa-chevron-down"></i></a>
+                            <a href="#services" class="nav-link"><span data-i18n="nav_services">Hizmetler</span> <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="hizmetler-insaat.html">İnşaat</a></li>
-                                <li><a href="hizmetler-icmimarlik.html">İç Mimarlık</a></li>
-                                <li><a href="hizmetler-kentsel.html">Kentsel Dönüşüm</a></li>
-                                <li><a href="hizmetler-mobilya.html">Mobilya & Mutfak</a></li>
+                                <li><a href="hizmetler-insaat.html" data-i18n="service_construction">İnşaat</a></li>
+                                <li><a href="hizmetler-icmimarlik.html" data-i18n="service_interior">İç Mimarlık</a></li>
+                                <li><a href="hizmetler-kentsel.html" data-i18n="service_urban">Kentsel Dönüşüm</a></li>
+                                <li><a href="hizmetler-mobilya.html" data-i18n="service_furniture">Mobilya & Mutfak</a></li>
                             </ul>
                         </li>
-                        <li><a href="#portfolio" class="nav-link">Portföy</a></li>
-                        <li><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li><a href="#contact" class="nav-link">İletişim</a></li>
+                        <li><a href="#portfolio" class="nav-link" data-i18n="nav_projects">Projeler</a></li>
+                        <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+                        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">İletişim</a></li>
                     </ul>
+                    <!-- Mobile Language Switcher -->
+                    <div class="mobile-language-switcher">
+                        <button class="lang-btn active" data-lang="tr" title="Türkçe">TR</button>
+                        <button class="lang-btn" data-lang="en" title="English">EN</button>
+                        <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+                        <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+                    </div>
                 </div>
                 
                 <div class="nav-actions">
@@ -106,6 +114,13 @@
                         <i class="fas fa-phone"></i>
                         <span>+90 232 444 04 03</span>
                     </a>
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="tr" title="Türkçe">TR</button>
+                        <button class="lang-btn" data-lang="en" title="English">EN</button>
+                        <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+                        <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+                    </div>
                     <button class="menu-toggle" id="menuToggle">
                         <span></span>
                         <span></span>
@@ -127,36 +142,36 @@
             <div class="container">
                 <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
                     <h1 class="hero-title">
-                        <span class="title-line">Hayallerinizi</span>
-                        <span class="title-line gold">Gerçeğe Dönüştürüyoruz</span>
+                        <span class="title-line" data-i18n="hero_title_1">Hayallerinizi</span>
+                        <span class="title-line gold" data-i18n="hero_title_2">Gerçeğe Dönüştürüyoruz</span>
                     </h1>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-i18n="hero_subtitle">
                         İnşaat, İç Mimarlık ve Kentsel Dönüşüm alanlarında lüks ve profesyonel çözümler
                     </p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
                         <a href="#portfolio" class="btn btn-primary">
-                            <span>Projelerimiz</span>
+                            <span data-i18n="hero_btn_projects">Projelerimiz</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                         <a href="#contact" class="btn btn-outline">
-                            <span>İletişime Geçin</span>
+                            <span data-i18n="hero_btn_contact">İletişime Geçin</span>
                             <i class="fas fa-phone"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
                     <div class="stat-item">
                         <div class="stat-number" data-count="150">0</div>
-                        <div class="stat-label">Tamamlanan Proje</div>
+                        <div class="stat-label" data-i18n="stat_projects">Tamamlanan Proje</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-count="15">0</div>
-                        <div class="stat-label">Yıllık Deneyim</div>
+                        <div class="stat-label" data-i18n="stat_experience">Yıllık Deneyim</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-count="500">0</div>
-                        <div class="stat-label">Mutlu Müşteri</div>
+                        <div class="stat-label" data-i18n="stat_clients">Mutlu Müşteri</div>
                     </div>
                 </div>
             </div>
@@ -166,7 +181,7 @@
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
-            <p>Aşağı Kaydır</p>
+            <p data-i18n="scroll_down">Aşağı Kaydır</p>
         </div>
     </section>
 
@@ -174,8 +189,8 @@
     <section class="about-section" id="about">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Biz Kimiz</span>
-                <h2 class="section-title">Hakkımızda</h2>
+                <span class="section-subtitle" data-i18n="about_subtitle">Biz Kimiz</span>
+                <h2 class="section-title" data-i18n="about_title">Hakkımızda</h2>
                 <div class="title-divider"></div>
             </div>
             
@@ -191,26 +206,26 @@
                 </div>
                 
                 <div class="about-text" data-aos="fade-left">
-                    <h3 class="about-heading">Ceypa Vision ile Farkı Yaşayın</h3>
-                    <p class="about-description">
-                        Ceypa Vision olarak, inşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında 
-                        15 yılı aşkın deneyimimizle sektörde öncü konumdayız. İzmir'in kalbinde, Buca'da 
+                    <h3 class="about-heading" data-i18n="about_heading">Ceypa Vision ile Farkı Yaşayın</h3>
+                    <p class="about-description" data-i18n="about_desc_1">
+                        Ceypa Vision olarak, inşaat, gayrimenkul, iç mimarlık ve kentsel dönüşüm alanlarında
+                        15 yılı aşkın deneyimimizle sektörde öncü konumdayız. İzmir'in kalbinde, Buca'da
                         konumlanan firmamız, her projede mükemmeliyeti ve müşteri memnuniyetini ön planda tutar.
                     </p>
-                    <p class="about-description">
-                        Uzman kadromuz ve yenilikçi yaklaşımımızla, hayalinizdeki yaşam alanlarını gerçeğe 
-                        dönüştürüyoruz. Kalite, estetik ve fonksiyonelliği bir araya getirerek, size özel 
+                    <p class="about-description" data-i18n="about_desc_2">
+                        Uzman kadromuz ve yenilikçi yaklaşımımızla, hayalinizdeki yaşam alanlarını gerçeğe
+                        dönüştürüyoruz. Kalite, estetik ve fonksiyonelliği bir araya getirerek, size özel
                         çözümler sunuyoruz.
                     </p>
-                    
+
                     <div class="about-features">
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <i class="fas fa-award"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Kalite Garantisi</h4>
-                                <p>En yüksek standartlarda hizmet</p>
+                                <h4 data-i18n="about_feature_1_title">Kalite Garantisi</h4>
+                                <p data-i18n="about_feature_1_desc">En yüksek standartlarda hizmet</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -218,8 +233,8 @@
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Uzman Kadro</h4>
-                                <p>Deneyimli ve profesyonel ekip</p>
+                                <h4 data-i18n="about_feature_2_title">Uzman Kadro</h4>
+                                <p data-i18n="about_feature_2_desc">Deneyimli ve profesyonel ekip</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -227,14 +242,14 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Zamanında Teslimat</h4>
-                                <p>Planlı ve düzenli çalışma</p>
+                                <h4 data-i18n="about_feature_3_title">Zamanında Teslimat</h4>
+                                <p data-i18n="about_feature_3_desc">Planlı ve düzenli çalışma</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <a href="#contact" class="btn btn-primary">
-                        <span>Bizimle İletişime Geçin</span>
+                        <span data-i18n="about_btn_contact">Bizimle İletişime Geçin</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -254,10 +269,10 @@
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Neler Yapıyoruz</span>
-                <h2 class="section-title">Hizmetlerimiz</h2>
+                <span class="section-subtitle" data-i18n="services_subtitle">Neler Yapıyoruz</span>
+                <h2 class="section-title" data-i18n="services_title">Hizmetlerimiz</h2>
                 <div class="title-divider"></div>
-                <p class="section-description">
+                <p class="section-description" data-i18n="services_description">
                     İnşaattan iç mimarlığa, kentsel dönüşümden mobilya tasarımına kadar geniş yelpazede profesyonel hizmetler sunuyoruz.
                 </p>
             </div>
@@ -370,35 +385,34 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Projects Section (Projeler) -->
     <section class="portfolio-section" id="portfolio">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Çalışmalarımız</span>
-                <h2 class="section-title">Portföy</h2>
+                <span class="section-subtitle" data-i18n="projects_subtitle">Çalışmalarımız</span>
+                <h2 class="section-title" data-i18n="projects_title">Projeler</h2>
                 <div class="title-divider"></div>
-                <p class="section-description">
-                    Tamamladığımız projelerle gurur duyuyoruz. Her biri özenle tasarlanmış ve hayata geçirilmiştir.
+                <p class="section-description" data-i18n="projects_description">
+                    Tamamladığımız ve devam eden projelerimizle gurur duyuyoruz. Her biri özenle tasarlanmış ve hayata geçirilmiştir.
                 </p>
             </div>
-            
+
             <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-                <button class="filter-btn active" data-filter="all">Tümü</button>
-                <button class="filter-btn" data-filter="insaat">İnşaat</button>
-                <button class="filter-btn" data-filter="ic-mimarlik">İç Mimarlık</button>
-                <button class="filter-btn" data-filter="kentsel">Kentsel Dönüşüm</button>
-                <button class="filter-btn" data-filter="mobilya">Mobilya & Mutfak</button>
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tümü</button>
+                <button class="filter-btn" data-filter="completed" data-i18n="filter_completed">Biten</button>
+                <button class="filter-btn" data-filter="ongoing" data-i18n="filter_ongoing">Devam Eden</button>
             </div>
-            
+
             <div class="portfolio-grid">
-                <!-- Portfolio items will be dynamically loaded -->
-                <div class="portfolio-item" data-category="insaat" data-aos="fade-up" data-aos-delay="100">
+                <!-- Biten Projeler (Completed Projects) -->
+                <div class="portfolio-item" data-category="completed" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-1.jpg" alt="Lüks Konut Projesi">
+                        <img src="assets/images/portfolio/project-1.jpg" alt="Ceypa Apartmanı - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Lüks Konut Projesi</h3>
-                                <p>Modern Mimari Tasarım</p>
+                                <span class="project-status completed-badge"><i class="fas fa-check-circle"></i> Biten</span>
+                                <h3 data-i18n="project_1">Ceypa Apartmanı - Buca</h3>
+                                <p data-i18n="project_1_desc">4 Katlı Konut Projesi</p>
                                 <a href="assets/images/portfolio/project-1.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -406,14 +420,15 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="ic-mimarlik" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="portfolio-item" data-category="completed" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-2.jpg" alt="Villa İç Tasarım">
+                        <img src="assets/images/portfolio/project-2.jpg" alt="Ceypa Residence - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Villa İç Tasarım</h3>
-                                <p>Minimalist & Şık</p>
+                                <span class="project-status completed-badge"><i class="fas fa-check-circle"></i> Biten</span>
+                                <h3 data-i18n="project_2">Ceypa Residence - Buca</h3>
+                                <p data-i18n="project_2_desc">Modern Apartman</p>
                                 <a href="assets/images/portfolio/project-2.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -421,14 +436,15 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="kentsel" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="portfolio-item" data-category="completed" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-3.jpg" alt="Kentsel Dönüşüm">
+                        <img src="assets/images/portfolio/project-3.jpg" alt="Ceypa Plaza - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Kentsel Dönüşüm</h3>
-                                <p>Güvenli Yaşam Alanı</p>
+                                <span class="project-status completed-badge"><i class="fas fa-check-circle"></i> Biten</span>
+                                <h3 data-i18n="project_3">Ceypa Plaza - Buca</h3>
+                                <p data-i18n="project_3_desc">Konut Projesi</p>
                                 <a href="assets/images/portfolio/project-3.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -436,14 +452,15 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="mobilya" data-aos="fade-up" data-aos-delay="400">
+
+                <div class="portfolio-item" data-category="completed" data-aos="fade-up" data-aos-delay="400">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-4.jpg" alt="Özel Mutfak Tasarımı">
+                        <img src="assets/images/portfolio/project-4.jpg" alt="Ceypa Tower - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Özel Mutfak Tasarımı</h3>
-                                <p>Modern & Fonksiyonel</p>
+                                <span class="project-status completed-badge"><i class="fas fa-check-circle"></i> Biten</span>
+                                <h3 data-i18n="project_4">Ceypa Tower - Buca</h3>
+                                <p data-i18n="project_4_desc">Lüks Daire Projesi</p>
                                 <a href="assets/images/portfolio/project-4.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -451,14 +468,15 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="insaat" data-aos="fade-up" data-aos-delay="500">
+
+                <div class="portfolio-item" data-category="completed" data-aos="fade-up" data-aos-delay="500">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-5.jpg" alt="Ticari Bina">
+                        <img src="assets/images/portfolio/project-5.jpg" alt="Ceypa Modern - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Ticari Bina</h3>
-                                <p>Çağdaş Ofis Yapısı</p>
+                                <span class="project-status completed-badge"><i class="fas fa-check-circle"></i> Biten</span>
+                                <h3 data-i18n="project_5">Ceypa Modern - Buca</h3>
+                                <p data-i18n="project_5_desc">Modern Yaşam Alanı</p>
                                 <a href="assets/images/portfolio/project-5.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -466,14 +484,16 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="ic-mimarlik" data-aos="fade-up" data-aos-delay="600">
+
+                <!-- Devam Eden Projeler (Ongoing Projects) -->
+                <div class="portfolio-item" data-category="ongoing" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-6.jpg" alt="Otel Lobisi">
+                        <img src="assets/images/portfolio/project-6.jpg" alt="Ceypa Elite - Buca">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Otel Lobisi</h3>
-                                <p>Lüks İç Mekan</p>
+                                <span class="project-status ongoing-badge"><i class="fas fa-spinner fa-spin"></i> Devam Ediyor</span>
+                                <h3>Ceypa Elite - Buca</h3>
+                                <p>Yeni Nesil Konut</p>
                                 <a href="assets/images/portfolio/project-6.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -481,12 +501,60 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="portfolio-item" data-category="ongoing" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/project-7.jpg" alt="Ceypa Premium - Buca">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="project-status ongoing-badge"><i class="fas fa-spinner fa-spin"></i> Devam Ediyor</span>
+                                <h3>Ceypa Premium - Buca</h3>
+                                <p>Premium Daire Projesi</p>
+                                <a href="assets/images/portfolio/project-7.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ongoing" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/project-8.jpg" alt="Ceypa Garden - Buca">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="project-status ongoing-badge"><i class="fas fa-spinner fa-spin"></i> Devam Ediyor</span>
+                                <h3>Ceypa Garden - Buca</h3>
+                                <p>Bahçeli Konut</p>
+                                <a href="assets/images/portfolio/project-8.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ongoing" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/project-9.jpg" alt="Ceypa Life - Buca">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="project-status ongoing-badge"><i class="fas fa-spinner fa-spin"></i> Devam Ediyor</span>
+                                <h3>Ceypa Life - Buca</h3>
+                                <p>Yaşam Kompleksi</p>
+                                <a href="assets/images/portfolio/project-9.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="portfolio-cta" data-aos="fade-up">
-                <p>Daha fazla proje görmek ister misiniz?</p>
+                <p data-i18n="projects_cta">Daha fazla proje görmek ister misiniz?</p>
                 <a href="#contact" class="btn btn-primary">
-                    <span>Bizimle İletişime Geçin</span>
+                    <span data-i18n="projects_cta_btn">Bizimle İletişime Geçin</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -497,10 +565,10 @@
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-subtitle">Bize Ulaşın</span>
-                <h2 class="section-title">İletişim</h2>
+                <span class="section-subtitle" data-i18n="contact_subtitle">Bize Ulaşın</span>
+                <h2 class="section-title" data-i18n="contact_title">İletişim</h2>
                 <div class="title-divider"></div>
-                <p class="section-description">
+                <p class="section-description" data-i18n="contact_description">
                     Projeleriniz için bizimle iletişime geçin. Size en kısa sürede dönüş yapalım.
                 </p>
             </div>
@@ -622,14 +690,14 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Hızlı Linkler</h4>
+                    <h4 data-i18n="footer_quick_links">Hızlı Linkler</h4>
                     <div class="footer-links">
-                        <a href="#home">Ana Sayfa</a>
-                        <a href="#about">Hakkımızda</a>
-                        <a href="#services">Hizmetler</a>
-                        <a href="#portfolio">Portföy</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="#contact">İletişim</a>
+                        <a href="#home" data-i18n="nav_home">Ana Sayfa</a>
+                        <a href="#about" data-i18n="nav_about">Hakkımızda</a>
+                        <a href="#services" data-i18n="nav_services">Hizmetler</a>
+                        <a href="#portfolio" data-i18n="nav_projects">Projeler</a>
+                        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                        <a href="#contact" data-i18n="nav_contact">İletişim</a>
                     </div>
                 </div>
                 
@@ -735,5 +803,7 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/no-select.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html>

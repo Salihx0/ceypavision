@@ -192,9 +192,17 @@
     .btn-call span {
         display: none;
     }
-    
+
     .btn-call {
         padding: 12px 20px;
+    }
+
+    .language-switcher {
+        display: none;
+    }
+
+    .mobile-language-switcher {
+        display: flex !important;
     }
     
     /* Hero */
