@@ -220,6 +220,16 @@
         width: 100%;
         justify-content: center;
     }
+
+    .language-switcher {
+        width: 100%;
+    }
+
+    .language-menu {
+        width: 100%;
+        position: static;
+        margin-top: 10px;
+    }
     
     .hero-stats {
         gap: 40px;
@@ -312,6 +322,14 @@
     
     .portfolio-content p {
         font-size: 13px;
+    }
+
+    .cookie-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cookie-actions {
+        justify-content: center;
     }
     
     /* Contact */

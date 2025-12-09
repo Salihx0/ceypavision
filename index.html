@@ -95,13 +95,25 @@
                                 <li><a href="hizmetler-mobilya.html">Mobilya & Mutfak</a></li>
                             </ul>
                         </li>
-                        <li><a href="#portfolio" class="nav-link">Portföy</a></li>
+                        <li><a href="#portfolio" class="nav-link">Projeler</a></li>
                         <li><a href="blog.html" class="nav-link">Blog</a></li>
                         <li><a href="#contact" class="nav-link">İletişim</a></li>
                     </ul>
                 </div>
                 
                 <div class="nav-actions">
+                    <div class="language-switcher" aria-label="Dil seçici">
+                        <button class="language-toggle" aria-expanded="false" aria-controls="languageMenu">
+                            <i class="fas fa-globe"></i>
+                            <span class="language-label">TR</span>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <button class="language-option" data-lang="tr" aria-label="Türkçe">Türkçe</button>
+                            <button class="language-option" data-lang="en" aria-label="English">English</button>
+                            <button class="language-option" data-lang="ru" aria-label="Русский">Русский</button>
+                            <button class="language-option" data-lang="ar" aria-label="العربية">العربية</button>
+                        </div>
+                    </div>
                     <a href="tel:+902324440403" class="btn-call">
                         <i class="fas fa-phone"></i>
                         <span>+90 232 444 04 03</span>
@@ -370,35 +382,120 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Projects Section -->
     <section class="portfolio-section" id="portfolio">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-subtitle">Çalışmalarımız</span>
-                <h2 class="section-title">Portföy</h2>
+                <h2 class="section-title">Projeler</h2>
                 <div class="title-divider"></div>
                 <p class="section-description">
-                    Tamamladığımız projelerle gurur duyuyoruz. Her biri özenle tasarlanmış ve hayata geçirilmiştir.
+                    Tamamladığımız ve devam eden projelerimizi keşfedin. Her biri özenle tasarlanmış ve hayata geçirilmiştir.
                 </p>
             </div>
-            
+
             <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
-                <button class="filter-btn active" data-filter="all">Tümü</button>
-                <button class="filter-btn" data-filter="insaat">İnşaat</button>
-                <button class="filter-btn" data-filter="ic-mimarlik">İç Mimarlık</button>
-                <button class="filter-btn" data-filter="kentsel">Kentsel Dönüşüm</button>
-                <button class="filter-btn" data-filter="mobilya">Mobilya & Mutfak</button>
+                <button class="filter-btn active" data-filter="biten">Biten</button>
+                <button class="filter-btn" data-filter="devam">Devam Eden</button>
             </div>
-            
+
             <div class="portfolio-grid">
-                <!-- Portfolio items will be dynamically loaded -->
-                <div class="portfolio-item" data-category="insaat" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-1.jpg" alt="Lüks Konut Projesi">
+                        <img src="assets/images/biten/project-1.jpg" alt="Tamamlanan villa projesi">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Lüks Konut Projesi</h3>
+                                <h3>Teslim Edilen Villa</h3>
                                 <p>Modern Mimari Tasarım</p>
+                                <a href="assets/images/biten/project-1.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="150">
+                    <div class="portfolio-image">
+                        <img src="assets/images/biten/project-2.jpg" alt="Tamamlanan iç mimarlık çalışması">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>İç Mimarlık</h3>
+                                <p>Minimalist & Şık</p>
+                                <a href="assets/images/biten/project-2.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/images/biten/project-3.jpg" alt="Kentsel dönüşüm projesi">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Kentsel Dönüşüm</h3>
+                                <p>Güvenli Yaşam Alanı</p>
+                                <a href="assets/images/biten/project-3.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="250">
+                    <div class="portfolio-image">
+                        <img src="assets/images/biten/project-4.jpg" alt="Tamamlanan mutfak tasarımı">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Özel Mutfak Tasarımı</h3>
+                                <p>Modern & Fonksiyonel</p>
+                                <a href="assets/images/biten/project-4.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="assets/images/biten/project-5.jpg" alt="Ticari bina projesi">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Ticari Bina</h3>
+                                <p>Çağdaş Ofis Yapısı</p>
+                                <a href="assets/images/biten/project-5.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-status="biten" data-aos="fade-up" data-aos-delay="350">
+                    <div class="portfolio-image">
+                        <img src="assets/images/biten/project-6.jpg" alt="Otel lobi projesi">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Otel Lobisi</h3>
+                                <p>Lüks İç Mekan</p>
+                                <a href="assets/images/biten/project-6.jpg" class="portfolio-link glightbox">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/project-1.jpg" alt="Devam eden lüks konut projesi">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Devam Eden Konut</h3>
+                                <p>Yeni nesil mimari</p>
                                 <a href="assets/images/portfolio/project-1.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -406,13 +503,13 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="ic-mimarlik" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="450">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-2.jpg" alt="Villa İç Tasarım">
+                        <img src="assets/images/portfolio/project-2.jpg" alt="Devam eden iç mimarlık projesi">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Villa İç Tasarım</h3>
+                                <h3>İç Tasarım Çalışması</h3>
                                 <p>Minimalist & Şık</p>
                                 <a href="assets/images/portfolio/project-2.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
@@ -421,14 +518,14 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="kentsel" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="500">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-3.jpg" alt="Kentsel Dönüşüm">
+                        <img src="assets/images/portfolio/project-3.jpg" alt="Devam eden kentsel dönüşüm projesi">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Kentsel Dönüşüm</h3>
-                                <p>Güvenli Yaşam Alanı</p>
+                                <p>Planlama Aşamasında</p>
                                 <a href="assets/images/portfolio/project-3.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -436,13 +533,13 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="mobilya" data-aos="fade-up" data-aos-delay="400">
+
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="550">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-4.jpg" alt="Özel Mutfak Tasarımı">
+                        <img src="assets/images/portfolio/project-4.jpg" alt="Devam eden mutfak tasarımı">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
-                                <h3>Özel Mutfak Tasarımı</h3>
+                                <h3>Mutfak Tasarımı</h3>
                                 <p>Modern & Fonksiyonel</p>
                                 <a href="assets/images/portfolio/project-4.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
@@ -451,14 +548,14 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="insaat" data-aos="fade-up" data-aos-delay="500">
+
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="600">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-5.jpg" alt="Ticari Bina">
+                        <img src="assets/images/portfolio/project-5.jpg" alt="Devam eden ticari bina projesi">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Ticari Bina</h3>
-                                <p>Çağdaş Ofis Yapısı</p>
+                                <p>İnşaat Sürecinde</p>
                                 <a href="assets/images/portfolio/project-5.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -466,14 +563,14 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="ic-mimarlik" data-aos="fade-up" data-aos-delay="600">
+
+                <div class="portfolio-item" data-status="devam" data-aos="fade-up" data-aos-delay="650">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio/project-6.jpg" alt="Otel Lobisi">
+                        <img src="assets/images/portfolio/project-6.jpg" alt="Devam eden otel lobi projesi">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Otel Lobisi</h3>
-                                <p>Lüks İç Mekan</p>
+                                <p>Tasarım Güncelleniyor</p>
                                 <a href="assets/images/portfolio/project-6.jpg" class="portfolio-link glightbox">
                                     <i class="fas fa-search-plus"></i>
                                 </a>
@@ -627,7 +724,7 @@
                         <a href="#home">Ana Sayfa</a>
                         <a href="#about">Hakkımızda</a>
                         <a href="#services">Hizmetler</a>
-                        <a href="#portfolio">Portföy</a>
+                        <a href="#portfolio">Projeler</a>
                         <a href="blog.html">Blog</a>
                         <a href="#contact">İletişim</a>
                     </div>
@@ -663,6 +760,35 @@
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Çerez bilgilendirme penceresi">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>Çerez Kullanımı</h3>
+                <p>Deneyiminizi geliştirmek için zorunlu ve isteğe bağlı çerezler kullanıyoruz. Tercihlerinizi seçerek dilediğiniz zaman güncelleyebilirsiniz.</p>
+            </div>
+            <div class="cookie-options">
+                <label class="cookie-option">
+                    <input type="checkbox" checked disabled>
+                    <span>Zorunlu çerezler (her zaman aktif)</span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="cookieAnalytics">
+                    <span>Analitik çerezler</span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="cookieMarketing">
+                    <span>Pazarlama çerezleri</span>
+                </label>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn btn-primary" id="acceptCookies">Kabul Et</button>
+                <button class="btn btn-outline" id="rejectCookies">Reddet</button>
+                <button class="btn btn-light" id="saveCookiePreferences">Tercihleri Kaydet</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Theme Switcher -->
     <div class="theme-switcher">
