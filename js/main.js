@@ -267,39 +267,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
+
+    const applyPortfolioFilter = (filterValue) => {
+        portfolioItems.forEach(item => {
+            const status = item.getAttribute('data-status');
+            const shouldShow = filterValue === 'all' || status === filterValue;
+
+            if (shouldShow) {
+                item.classList.remove('hide');
+                setTimeout(() => {
+                    item.style.display = 'block';
+                }, 10);
+            } else {
+                item.classList.add('hide');
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
+            }
+        });
+    };
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             this.classList.add('active');
-            
+
             const filterValue = this.getAttribute('data-filter');
-            
-            portfolioItems.forEach(item => {
-                if (filterValue === 'all') {
-                    item.classList.remove('hide');
-                    setTimeout(() => {
-                        item.style.display = 'block';
-                    }, 10);
-                } else {
-                    const category = item.getAttribute('data-category');
-                    if (category === filterValue) {
-                        item.classList.remove('hide');
-                        setTimeout(() => {
-                            item.style.display = 'block';
-                        }, 10);
-                    } else {
-                        item.classList.add('hide');
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                }
-            });
+            applyPortfolioFilter(filterValue);
         });
     });
+
+    const defaultFilter = document.querySelector('.filter-btn.active');
+    if (defaultFilter) {
+        applyPortfolioFilter(defaultFilter.getAttribute('data-filter'));
+    }
 
     // ===================================
     // GLightbox Initialization
@@ -356,6 +357,124 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Bir hata oluştu. Lütfen tekrar deneyin.');
             });
             */
+        });
+    }
+
+    // ===================================
+    // Language Switcher
+    // ===================================
+    const languageToggle = document.querySelector('.language-toggle');
+    const languageMenu = document.getElementById('languageMenu');
+    const languageLabel = document.querySelector('.language-label');
+    const languageOptions = document.querySelectorAll('.language-option');
+
+    const setLanguage = (lang) => {
+        const label = lang.toUpperCase();
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        localStorage.setItem('preferredLanguage', lang);
+
+        if (languageLabel) {
+            languageLabel.textContent = label;
+        }
+
+        if (languageMenu) {
+            languageMenu.classList.remove('open');
+        }
+
+        if (languageToggle) {
+            languageToggle.setAttribute('aria-expanded', 'false');
+        }
+    };
+
+    if (languageToggle && languageMenu) {
+        languageToggle.addEventListener('click', () => {
+            const isOpen = languageMenu.classList.toggle('open');
+            languageToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!languageMenu.contains(event.target) && !languageToggle.contains(event.target)) {
+                languageMenu.classList.remove('open');
+                languageToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    languageOptions.forEach(option => {
+        option.addEventListener('click', () => setLanguage(option.getAttribute('data-lang')));
+    });
+
+    const storedLang = localStorage.getItem('preferredLanguage');
+    if (storedLang) {
+        setLanguage(storedLang);
+    }
+
+    // ===================================
+    // Cookie Consent
+    // ===================================
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptCookiesBtn = document.getElementById('acceptCookies');
+    const rejectCookiesBtn = document.getElementById('rejectCookies');
+    const saveCookiePreferencesBtn = document.getElementById('saveCookiePreferences');
+    const analyticsCheckbox = document.getElementById('cookieAnalytics');
+    const marketingCheckbox = document.getElementById('cookieMarketing');
+
+    const saveCookiePreferences = (preferences) => {
+        localStorage.setItem('cookieConsent', JSON.stringify({
+            necessary: true,
+            analytics: preferences.analytics,
+            marketing: preferences.marketing,
+            timestamp: new Date().toISOString()
+        }));
+    };
+
+    const hideCookieBanner = () => {
+        if (cookieBanner) {
+            cookieBanner.classList.add('hide');
+            setTimeout(() => {
+                cookieBanner.style.display = 'none';
+            }, 300);
+        }
+    };
+
+    const showCookieBanner = () => {
+        if (cookieBanner) {
+            cookieBanner.style.display = 'flex';
+            cookieBanner.classList.remove('hide');
+        }
+    };
+
+    if (cookieBanner && acceptCookiesBtn && rejectCookiesBtn && saveCookiePreferencesBtn) {
+        const storedConsent = localStorage.getItem('cookieConsent');
+        if (!storedConsent) {
+            showCookieBanner();
+        } else {
+            const consentData = JSON.parse(storedConsent);
+            if (analyticsCheckbox) analyticsCheckbox.checked = !!consentData.analytics;
+            if (marketingCheckbox) marketingCheckbox.checked = !!consentData.marketing;
+        }
+
+        acceptCookiesBtn.addEventListener('click', () => {
+            saveCookiePreferences({ analytics: true, marketing: true });
+            if (analyticsCheckbox) analyticsCheckbox.checked = true;
+            if (marketingCheckbox) marketingCheckbox.checked = true;
+            hideCookieBanner();
+        });
+
+        rejectCookiesBtn.addEventListener('click', () => {
+            saveCookiePreferences({ analytics: false, marketing: false });
+            if (analyticsCheckbox) analyticsCheckbox.checked = false;
+            if (marketingCheckbox) marketingCheckbox.checked = false;
+            hideCookieBanner();
+        });
+
+        saveCookiePreferencesBtn.addEventListener('click', () => {
+            saveCookiePreferences({
+                analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
+                marketing: marketingCheckbox ? marketingCheckbox.checked : false
+            });
+            hideCookieBanner();
         });
     }
 
